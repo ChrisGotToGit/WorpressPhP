@@ -1,2 +1,2 @@
 # WorpressPhP
-Wordpressgrund gjord med egen php, header, footer och sidebars.
+Wordpressfiler gjord med egen php, header, footer och sidebars.
