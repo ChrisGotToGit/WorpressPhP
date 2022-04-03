@@ -1,0 +1,345 @@
+/* 
+Theme Name: egetPHPTema
+Theme URI: http://localhost
+Description: Eget php test
+Copyright: GPLv2
+Version 1.0
+Author: Christopher Olsson
+Author URI: http://chrisportfolio.se
+Tags: simple, clean
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/*CSS-reset*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+/*CSS-reset END*/
+
+/* ============================================================ */
+/*                         STANDARD STUFF                                     */
+/* ============================================================ */
+
+body {
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  background-color: #131313;
+  color: white;
+}
+
+#carousell {
+  width: 100%;
+}
+
+p {
+  padding-bottom: 2rem;
+  line-height: 140%;
+}
+/* ============================================================ */
+/*                         HEADLINES & FONTS                                */
+/* ============================================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  padding: 1rem 0 0.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 1.6rem;
+}
+h4 {
+  font-size: 1.4rem;
+}
+h5 {
+  font-size: 1.2rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+/* ============================================================ */
+/*                           LAYOUT STUFF                                 */
+/* ============================================================ */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin: 0 auto;
+}
+
+header.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  background-color: tomato;
+}
+
+nav.main {
+  
+  color: white;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  
+  margin: 40px 30px 80px 30px;
+}
+
+section.main {
+  
+  padding: 30px;
+}
+
+aside.sidebar-left {
+  
+  padding: 30px;
+}
+
+aside.sidebar-right {
+  
+  padding: 30px;
+}
+
+/* ============================================================ */
+/*                                 NAVIGATION                             */
+/* ============================================================ */
+nav.main ul {
+  display: flex;
+  list-style-type: none;
+  font: 1.2rem "Roboto", serif;
+  font-weight: bold;
+}
+
+nav.main li a {
+  display: block;
+  height: 100%;
+  padding: 1.2rem 2rem;
+  color: white;
+  text-decoration: none;
+}
+
+nav.main li a:hover {
+  background-color: aquamarine;
+}
+
+/* ============================================================ */
+/*                             FOOTER SECTION                                 */
+/* ============================================================ */
+
+footer.main {
+  display: grid;
+  grid-template: "foot1 foot2 foot3";
+  
+}
+
+footer .foot1 {
+  /*background-color: chocolate;*/
+  grid-area: foot1;
+  padding: 60px;
+}
+
+footer .foot2 {
+  /*background-color: rgb(210, 30, 135);*/
+  grid-area: foot2;
+  padding: 60px;
+}
+
+footer .foot3 {
+  /*background-color: rgb(174, 171, 218);*/
+  grid-area: foot3;
+  padding: 60px;
+}
+
+/* ============================================================ */
+/*                             FOOTER SECTION                                 */
+/* ============================================================ */
+
+/* ============================================================ */
+/*                                                              */
+/* ============================================================ */
+
+/* ============================================================ */
+/*  MEDIA QUERIES: TABLET                                       */
+/* ============================================================ */
+@media (max-width: 1400px) {
+  .container {
+    width: 100%;
+  }
+  .content {
+    grid-template-columns: 2fr 1fr;
+  }
+  section.main {
+    grid-column: 1;
+    /* Börja i kolumn 1 och spänna över 2 rader */
+    grid-row: 1 / span 2;
+  }
+  footer.main {
+    grid-template:
+      "foot2" "foot2"
+      "foot1" "foot3";
+  }
+}
+
+/* ============================================================ */
+/*  MEDIA QUERIES: PHONE                                       */
+/* ============================================================ */
+@media (max-width: 900px) {
+  header.main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+.content{
+    grid-template-columns: 1fr;
+}
+
+  footer.main {
+    grid-template:
+      "foot1"
+      "foot2"
+      "foot3";
+  }
+}
